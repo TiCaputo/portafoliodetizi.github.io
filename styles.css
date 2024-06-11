@@ -1,0 +1,160 @@
+/* Estilos comunes para todos los tamaños de pantalla */
+body,
+.navbar-text,
+.titulo-descripcion,
+.descripcion {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    cursor: none;
+}
+
+#nombre {
+    font-size: 1.2rem;
+}
+
+header {
+    background-color: black;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-color: rgb(255, 255, 255);
+}
+
+.bg-image {
+    background-image: url('images/fond2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.cursor-trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+a,
+button,
+input,
+textarea {
+    cursor: none;
+}
+
+@keyframes escribir {
+    from {
+        width: 0;
+    }
+}
+
+.escritura-animada {
+    animation: escribir 1.5s steps(40, end);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid rgba(255, 255, 255, 0.75);
+}
+
+.titulo-rojo {
+    color: red;
+}
+
+.descripcion-rojo {
+    color: black;
+}
+
+.titulo-descripcion {
+    color: rgb(255, 0, 0);
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.lista-descripcion {
+    padding-top: 10px;
+    list-style-type: disc;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-family: 'Bebas Neue', sans-serif;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 100px 0; /* Este padding puede estar causando que el fondo se extienda demasiado hacia abajo */
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.red-social {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footertext {
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 767px) {
+    .img-fluidd {
+        max-width: 100%; /* Ajustar la imagen al ancho máximo del contenedor */
+        height: auto;
+    }
+
+    .btnProyecto,
+    .intereses {
+        margin-bottom: 200px; /* Reducir el margen inferior */
+    }
+}
+
+/* Estilos específicos para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .img-fluidd {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .img-fluidd:hover {
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+        content: url('./images/robot.png');
+    }
+
+    .miTrayecto,
+    .btnProyecto,
+    .intereses {
+        padding-bottom: 2rem; /* Agregar un poco de espacio inferior */
+    }
+
+}
